@@ -1,0 +1,87 @@
+<!-- <nav class="nav">
+    <ul class="left-margin">
+        <li>
+            <a class="nav-links" (click)="dashboard(0)" routerLink="errs">ERRS</a>
+        </li>
+        <li>
+            <label class="nav-links" (click)="navigateToEmployeeDashboard()">ADMIN PROFILE</label>
+        </li>
+    </ul>
+    <ul class="right-margin">
+        
+        <li>
+            <a class="nav-links" routerLink="product" (click)="dashboard(1)">PRODUCTS</a>
+        </li>
+        <li>
+            <a class="nav-links" routerLink="allocation" (click)="dashboard(2)">REWARDS</a>
+        </li>
+        
+        <li>
+            <a class="nav-links" routerLink="employee" (click)="dashboard(3)">EMPLOYEES</a>
+        </li>
+        <li>
+            <a class="nav-links" (click)="logout()">LOGOUT</a>
+        </li>
+       
+    </ul>
+</nav>
+<nav class="left-margin">
+    <ul>
+       <li *ngIf="dashboardNumber==2 "><a class="nav-links" routerLink="allocation">ALLOCATION HISTORY</a> </li>
+       <li *ngIf="dashboardNumber==2 "><a class="nav-links" routerLink="allocation/add">ALLOCATE POINTS</a> </li>
+       <li *ngIf="dashboardNumber==2 "><a class="nav-links" routerLink="reward">RECOGNITION ACTIVITY</a> </li>
+       <li *ngIf="dashboardNumber==2 "><a class="nav-links" routerLink="reward/add">ADD REWARD</a> </li>
+       <li *ngIf="dashboardNumber==1"><a class="nav-links"  routerLink="product">PRODUCT LIST</a></li>  
+       <li *ngIf="dashboardNumber==1"><a class="nav-links"  routerLink="deletedproducts">DELETED PRODUCT</a></li>  
+       <li *ngIf="dashboardNumber==1"><a class="nav-links"  routerLink="product/add">ADD PRODUCTS</a></li>
+       <li *ngIf="dashboardNumber==1"><a class="nav-links"  routerLink="redeem">REDEEM HISTORY</a></li>
+       <li *ngIf="dashboardNumber==3"><a class="nav-links"  routerLink="employee"> EMPLOYEES</a></li>
+       <li *ngIf="dashboardNumber==3"><a class="nav-links"  routerLink="pastemployee">PAST EMPLOYEES</a></li>
+
+    <li></li>
+    </ul>
+   
+</nav>
+
+<div class="vertical-divider">
+    <router-outlet></router-outlet>
+</div> -->
+<!-- app.component.html -->
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="logo"><button mat-button routerLink="errs"><span class="material-symbols-outlined"> home
+                </span></button></span>
+        <span class="spacer"></span>
+
+        <button mat-button (click)="navigateToEmployeeDashboard()" matTooltip="Profile"><span
+                class="material-symbols-outlined"> person </span></button>
+        <button mat-button [matMenuTriggerFor]="productsMenu" matTooltip="Products"><span
+                class="material-symbols-outlined"> shopping_cart </span></button>
+        <mat-menu #productsMenu="matMenu">
+            <button mat-menu-item routerLink="product">PRODUCT LIST</button>
+            <button mat-menu-item routerLink="deletedproducts">DELETED PRODUCT</button>
+            <button mat-menu-item routerLink="product/add">ADD PRODUCTS</button>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="rewardsMenu" matTooltip="Points"><span
+                class="material-symbols-outlined">grade</span></button>
+        <mat-menu #rewardsMenu="matMenu">
+            <button mat-menu-item routerLink="allocation">ALLOCATION HISTORY</button>
+            <button mat-menu-item routerLink="allocation/add">ALLOCATE POINTS</button>
+            <button mat-menu-item routerLink="reward">RECOGNITION ACTIVITY</button>
+            <button mat-menu-item routerLink="reward/add">ADD REWARD</button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="employeesMenu" matTooltip="Employees"><span
+                class="material-symbols-outlined">groups</span></button>
+        <mat-menu #employeesMenu="matMenu">
+            <button mat-menu-item routerLink="employee">EMPLOYEES</button>
+            <button mat-menu-item routerLink="pastemployee">PAST EMPLOYEES</button>
+        </mat-menu>
+        <button mat-button (click)="logout()" matTooltip="Logout"><span
+                class="material-symbols-outlined">logout</span></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

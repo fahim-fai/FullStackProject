@@ -1,0 +1,30 @@
+<div class="employee-details-form">
+  <div class="grid">
+    <label for="name">
+      Id
+      <input type="text" id="name" [value]="userId" readonly>
+    </label>
+
+    <label for="points">
+      Name
+      <input type="text" id="name" [value]="name" readonly>
+    </label>
+
+  </div>
+  <div class="grid">
+    <label for="email">
+      Email
+      <input type="text" id="email" [value]="email" readonly>
+    </label>
+
+    <label for="points">
+      Role
+      <input type="text" id="role" [value]="role" readonly>
+    </label>
+
+  </div>
+  <!-- Edit Button -->
+  <div class="grid button-container">
+    <button (click)="deleteuser()">Delete</button>
+  </div>
+</div>

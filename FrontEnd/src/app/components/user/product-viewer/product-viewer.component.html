@@ -1,0 +1,46 @@
+<div class="dialog-container">
+  <div class="dialog-box">
+    <main class="container">
+
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column img">
+        <img [src]="Image" loading="eager" />
+
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <span class="category">{{productData.category}}</span>
+          <h1 class="name">{{productData.name}}</h1>
+          <p class="termsAndCondition">{{productData.termsAndCondition}}</p>
+          <p class="quantity">quantity: {{productData.quantity}}</p>
+          <ng-container *ngIf="productData.expiryDate">
+            <p class="expiryDate">Expiry Date:{{productData.expiryDate | date: 'dd-MM-yyyy'}}</p>
+          </ng-container>
+        </div>
+
+        <!-- Product Configuration -->
+
+
+
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>Points: <span class="point">{{productData.points}}</span></span>
+
+
+        </div>
+
+      </div>
+    </main>
+    <button (click)="onConfirm()" class="cart-btn">Buy</button>
+    <button (click)="onCancel()" class="cart-btn-cancel">Cancel</button>
+  </div>
+</div>
+<app-dialogue-box *ngIf="showDialog" [points]="points" (confirmed)="onDialogConfirmed()"
+  (cancelled)="onDialogCancelled()">
+</app-dialogue-box>

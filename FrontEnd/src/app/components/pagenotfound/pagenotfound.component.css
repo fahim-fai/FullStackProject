@@ -1,0 +1,9 @@
+.centre-align {
+    text-align: center;
+    font-weight: 500;
+  }
+  .link{
+    margin-left: 60%;
+    color: blue;
+    text-decoration: underline;
+  }

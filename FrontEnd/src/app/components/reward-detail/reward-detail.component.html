@@ -1,0 +1,33 @@
+<h1 class="centre-align">
+  <ng-container *ngIf="isAddreward">ADD REWARD</ng-container>
+</h1>
+<form class="reward-details-form" [formGroup]="rewardForm">
+  <div class="grid">
+    <label for="id" *ngIf="!isAddreward">
+      Id
+      <input type="text" id="id" [value]="rewardId" placeholder="Id" readonly>
+    </label>
+
+
+  </div>
+
+  <div class="grid">
+    <label for="name">
+      Name
+      <input type="text" id="name" formControlName="name" [readonly]="!isEditMode" placeholder="name">
+    </label>
+
+    <label for="points">
+      Points
+      <input type="number" id="points" formControlName="points" [readonly]="!isEditMode" placeholder="Points">
+    </label>
+  </div>
+  <!-- Edit Button -->
+  <div class="grid button-container">
+
+    <button *ngIf="!isEditMode" type="button" (click)="toggleEditMode()">Edit</button>
+    <button *ngIf="isEditMode " type="button" (click)="saveReward()">Save</button>
+
+  </div>
+
+</form>

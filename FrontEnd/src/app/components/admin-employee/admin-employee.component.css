@@ -1,0 +1,47 @@
+/* Overall container */
+.user-container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.centre-align {
+  text-align: center;
+  font-weight: 500;
+  text-decoration: underline;
+}
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header */
+thead {
+  background-color: #f5f5f5;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Button styling */
+.delete {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+  background-color: #ff3e3e;
+}

@@ -1,0 +1,58 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<h1 class="centre-align">
+  <ng-container *ngIf="isAddallocation">ADD ALLOCATION</ng-container>
+</h1>
+<form class="allocation-details-form" [formGroup]="allocationForm">
+  <div *ngIf="!isAddallocation">
+    <div class="grid">
+      <label for="name">
+        Id
+        <input type="text" id="name" [value]="allocationId" placeholder="name" readonly>
+      </label>
+
+      <label for="points">
+        Username
+        <input type="text" id="name" [value]="userName" placeholder="Points" readonly>
+      </label>
+
+    </div>
+    <div class="grid">
+      <label for="name">
+        Reward Name
+        <input type="text" id="name" [value]="rewardName" placeholder="name" readonly>
+      </label>
+
+      <label for="points">
+        Awarded Points
+        <input type="text" id="name" [value]="awardedPoints" placeholder="Points" readonly>
+      </label>
+
+    </div>
+
+  </div>
+  <div *ngIf="isAddallocation">
+    <select formControlName="rewardId">
+      <option *ngFor="let reward of rewards" [value]="reward.id">{{ reward.name }}</option>
+
+    </select>
+    <select formControlName="userIds" id="userEmails" multiple name="userEmails">
+      <option *ngFor="let user of users" [value]="user.id">{{user.name}} - {{ user.email }}</option>
+    </select>
+  </div>
+
+
+
+
+
+
+  <div class="grid">
+
+    <button *ngIf="isAddallocation " type="button" (click)="saveallocation()">Save</button>
+
+    <button *ngIf="!isAddallocation" style="background-color: red;" (click)="deleteallocation()">Delete</button>
+  </div>
+
+
+</form>

@@ -1,0 +1,21 @@
+<h1 class="centre-align">PAST EMPLOYEE LIST</h1>
+<table role="grid">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td><button (click)="deletePastUser(user.id)" class="delete">DELETE</button></td>
+    </tr>
+  </tbody>
+</table>

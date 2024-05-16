@@ -1,0 +1,21 @@
+<h1 class="centre-align">ALLOCATED HISTORY</h1>
+<table role="grid">
+  <thead>
+    <tr>
+      <th>Allocation ID</th>
+      <th>Reward Name</th>
+      <th>Awarded Points</th>
+      <th>Allocated Date</th>
+      <!-- Add more columns as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let allocation of allocationData">
+      <td>{{ allocation.id }}</td>
+      <td>{{ allocation.recognitionActivityName }}</td>
+      <td>{{ allocation.awardedpoints }}</td>
+      <td>{{ allocation.allocatedDate}}</td>
+      <!-- Add more columns as needed -->
+    </tr>
+  </tbody>
+</table>

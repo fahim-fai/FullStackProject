@@ -1,0 +1,19 @@
+<h1 class="centre-align">REDEEM HISTORY</h1>
+<table role="grid">
+  <thead>
+    <tr>
+      <th>redeem ID</th>
+      <th>Product Name</th>
+      <th>Redeemed Points</th>
+      <th>Redeemed Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let redeem of redeemData">
+      <td>{{ redeem.id }}</td>
+      <td>{{ redeem.productName }}</td>
+      <td>{{ redeem.redeemedPoints }}</td>
+      <td>{{ redeem.redeemedDate }}</td>
+    </tr>
+  </tbody>
+</table>

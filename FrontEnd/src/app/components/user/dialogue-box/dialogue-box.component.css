@@ -1,0 +1,59 @@
+.dialog-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
+  width: 300px;
+  /* adjust width as needed */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+  /* ensure it appears above other content */
+}
+
+.dialog-box {
+  background-color: #53aae8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dialog-box button {
+  margin-top: 10px;
+}
+
+.cart-btn {
+  display: inline-block;
+  background-color: #23690f;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .2s;
+  border: none;
+  margin-right: 20px;
+}
+
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+
+.cart-btn-cancel {
+  display: inline-block;
+  background-color: rgb(158, 18, 18);
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .2s;
+  margin-right: 20px;
+  border: none;
+}
+
+.cart-btn-cancel:hover {
+  background-color: #d30404;
+}

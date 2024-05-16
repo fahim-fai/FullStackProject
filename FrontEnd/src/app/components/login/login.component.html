@@ -1,0 +1,50 @@
+<!-- <div class="container">
+    <h1><strong>ERRS</strong></h1>
+    <form method="post" [formGroup]="login">
+            <label>Email
+            <input type="email" name="email" placeholder="Email" formControlName="email">
+        </label>
+            <label>Password
+            <input type="password" name="password" placeholder="Password" id="password" formControlName="password">
+        </label>
+        <div class="grid">
+            <input type="submit" (click)="onSubmit()"/> 
+            <input type="reset"/>
+        </div>
+        <div class="grid">
+            <button (click)="navigateToRegister()"> New User?</button>
+            
+        </div>
+    </form>
+    
+
+</div>
+       -->
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<div class="container">
+  <div class="wrapper">
+    <div class="title"><span>Login</span></div>
+    <form method="post" [formGroup]="login">
+      <div class="row">
+        <i><span class="material-symbols-outlined">mail</span></i>
+        <input type="text" placeholder="Email " formControlName="email" required>
+      </div>
+      <div class="row">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" formControlName="password" required>
+      </div>
+
+      <div class="row button">
+        <input type="submit" (click)="onSubmit()" value="Login">
+      </div>
+      <div class="signup-link">New User? <a (click)="navigateToRegister()">Signup now</a></div>
+    </form>
+  </div>
+</div>

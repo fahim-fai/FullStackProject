@@ -1,0 +1,65 @@
+<h1 class="centre-align">
+  <ng-container *ngIf="isAddProduct">ADD ALLOCATION</ng-container>
+</h1>
+<form class="product-details-form" [formGroup]="productForm">
+
+  <div class="grid">
+    <label for="id" *ngIf="!isAddProduct">
+      Id
+      <input type="text" id="id" [value]="productId" placeholder="Id" readonly>
+    </label>
+
+
+    <label for="name">
+      Name
+      <input type="text" id="name" formControlName="name" [readonly]="!isEditMode" placeholder="Name">
+    </label>
+  </div>
+
+  <div class="grid">
+    <div style="height: 120px;">
+      <input type="file" [disabled]="!isEditMode" accept="image/*" (change)="handleImageChange($event)" />
+    </div>
+    <img [src]="Image" height="120" />
+  </div>
+
+
+  <div class="grid">
+    <label for="category">
+      Category
+      <input type="text" id="category" formControlName="category" [readonly]="!isEditMode" placeholder="Category">
+    </label>
+
+    <label for="points">
+      Points
+      <input type="number" id="points" formControlName="points" [readonly]="!isEditMode" placeholder="Points">
+    </label>
+  </div>
+
+  <div class="grid">
+    <label for="expiryDate">
+      Expiry Date
+      <input type="date" id="expiryDate" formControlName="expiryDate" [readonly]="!isEditMode"
+        placeholder="Expiry Date">
+    </label>
+
+    <label for="quantity">
+      Quantity
+      <input type="number" id="quantity" formControlName="quantity" [readonly]="!isEditMode" placeholder="Quantity">
+    </label>
+  </div>
+
+  <label for="termsAndCondition">
+    Terms And Conditions
+  </label>
+  <textarea id="termsAndCondition" formControlName="termsAndCondition" [readonly]="!isEditMode"></textarea>
+
+  <!-- Edit Button -->
+  <div class="grid">
+    <button *ngIf="!isEditMode" type="button" (click)="toggleEditMode()">Edit</button>
+    <button *ngIf="isEditMode" type="button" (click)="saveProduct()">Save</button>
+    <button *ngIf="!isAddProduct" style="background-color: red;" (click)="deleteProduct()">Delete</button>
+  </div>
+
+
+</form>

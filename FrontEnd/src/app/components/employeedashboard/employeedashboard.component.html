@@ -1,0 +1,76 @@
+<!-- <nav class="nav">
+    <ul>
+        <li>
+            <a class="left-margin nav-links" (click)="dashboard(1)">ERRS</a>
+        </li>
+        <li *ngIf="isAdmin">
+            <a class="nav-links" (click)="navigateToAdminPage()">ADMIN PAGE</a>
+        </li>
+    </ul>
+
+    <ul class="right-margin">
+        
+        <li>
+            <a class="nav-links" routerLink="points">POINTS</a>
+        </li>
+        <li>
+            <a class="nav-links" routerLink="product">PRODUCTS</a>
+        </li>
+        <li>
+            <a class="nav-links" routerLink="redeem">REDEEM HISTORY</a>
+        </li>
+        <li>
+            <a class="nav-links" routerLink="updatepassword">UPDATE PASSWORD</a>
+        </li>
+        <li>
+            <a class="nav-links" (click)="logout()">LOGOUT</a>
+        </li>
+       
+    </ul>
+</nav>
+
+
+<nav >
+    <ul class="left-margin">
+        Welcome {{userName}}
+    </ul>
+    <ul>
+        <li class="box">
+            <label >Points Earned: {{earnedPoints}}</label>
+        </li>
+        <li class="box">
+            <label >Points available: {{userPoint}}</label>
+        </li>
+    </ul>
+</nav>
+<div class="vertical-divider">
+    <router-outlet></router-outlet>
+</div>
+
+  -->
+<!-- app.component.html -->
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="logo"><button mat-button routerLink="errs"><span class="material-symbols-outlined"> home
+                </span></button></span>
+        <span class="spacer"></span>
+
+        <button *ngIf="isAdmin" mat-button (click)="navigateToAdminPage()" matTooltip="Admin Page"><span
+                class="material-symbols-outlined">admin_panel_settings</span></button>
+        <button mat-button routerLink="points" matTooltip="Points"><span
+                class="material-symbols-outlined">grade</span></button>
+        <button mat-button routerLink="product" matTooltip="Products"><span class="material-symbols-outlined">
+                shopping_cart </span></button>
+        <button mat-button routerLink="redeem" matTooltip="Redeem History"><span
+                class="material-symbols-outlined">inventory</span></button>
+        <button mat-button routerLink="updatepassword" matTooltip="Change Password"><span
+                class="material-symbols-outlined">password</span></button>
+
+        <button mat-button (click)="logout()" matTooltip="Logout"><span
+                class="material-symbols-outlined">logout</span></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

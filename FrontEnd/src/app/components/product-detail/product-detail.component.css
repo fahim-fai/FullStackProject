@@ -1,0 +1,70 @@
+.product-details-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 80px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.form-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+}
+.centre-align {
+  text-align: center;
+  font-weight: 500;
+  text-decoration: underline;
+}

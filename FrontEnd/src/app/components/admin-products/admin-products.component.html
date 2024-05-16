@@ -1,0 +1,47 @@
+<!-- <h1 class="centre-align">PRODUCT LIST</h1>
+<div *ngFor="let product of productData">
+    <ng-container *ngIf="product.available==true">
+
+    
+<article>
+    <header (click)="navigateToProductDetails(product.id)">
+        Product ID {{ product.id }}
+      </header>
+    
+    <main>
+        <div class="grid">
+            <img [src]="getImage(product.image_id)" loading="eager" />
+            <p>Name: {{ product.name }}</p>
+            <p>Category: {{ product.category }}</p>
+            <p>Points: {{ product.points }}</p>
+            <p>Quantity: {{ product.quantity }}</p>
+            <p>Expiry Date: {{ product.expiryDate | date: 'yyyy-MM-dd' }}</p>
+            <p>Terms and Conditions: {{ product.termsAndCondition }}</p>
+            <button (click)="navigateToProductDetails(product.id)">EDIT / DELETE</button>
+        </div>
+    </main>
+</article>
+</ng-container>
+</div> -->
+<h1 class="centre-align">PRODUCT LIST</h1>
+<div class="listing-section">
+  <ng-container *ngFor="let product of productData">
+    <ng-container *ngIf="product.available==true">
+      <div class="product">
+        <div class="image-box">
+          <img class="images" [src]="getImage(product.image_id)" loading="eager" />
+        </div>
+        <div class="text-box">
+          <h2 class="item">{{product.name}}</h2>
+          <h3 class="price">Points: {{ product.points }}</h3>
+          <label for="item-1-quantity">Quantity:</label>
+          <input type="text" name="item-1-quantity" id="item-1-quantity" value="{{product.quantity}}" readonly>
+          <button type="button" name="item-1-button" id="item-1-button"
+            (click)="navigateToProductDetails(product.id)">Edit / Delete
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+</div>

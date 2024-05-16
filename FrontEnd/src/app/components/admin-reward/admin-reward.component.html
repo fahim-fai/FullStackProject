@@ -1,0 +1,22 @@
+<h1 class="centre-align">REWARD LIST</h1>
+<table role="grid">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Name</th>
+
+      <th>Points</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reward of rewardData">
+      <td>{{ reward.id }}</td>
+      <td>{{ reward.name }}</td>
+
+      <td>{{ reward.points }}</td>
+      <td><button (click)="navigateToRewardtDetails(reward.id)">EDIT</button></td>
+      <!-- Add more columns as needed -->
+    </tr>
+  </tbody>
+</table>

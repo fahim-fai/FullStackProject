@@ -1,0 +1,49 @@
+/* Overall container */
+.reward-container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header */
+thead {
+  background-color: #f5f5f5;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Center align heading */
+.centre-align {
+  text-align: center;
+  font-weight: 500;
+  text-decoration: underline;
+}

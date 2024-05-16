@@ -1,0 +1,98 @@
+.allocation-details-form {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Update font-family for labels */
+  label {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Update font-family for input fields and select */
+  input[type="text"],
+  select {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Update font-family for buttons */
+  button {
+    font-family: 'Roboto', sans-serif;
+  }
+/* Container for the form */
+.allocation-details-form {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Grid layout for form fields */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Label styling */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Input field and select styling */
+  input[type="text"],
+  select {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: #007bff;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="button"] {
+    background-color: #007bff; /* Blue color */
+  }
+  
+  button[type="button"]:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  
+  button[type="button"]:focus {
+    outline: none;
+  }
+  
+  button[type="button"]:active {
+    transform: translateY(1px); /* Add a subtle downward shift on click */
+  }
+  
+  button[type="button"].delete {
+    background-color: red;
+  }
+  
+  button[type="button"].delete:hover {
+    background-color: darkred;
+  }
+  .centre-align {
+    text-align: center;
+    font-weight: 500;
+    text-decoration: underline;
+  }
